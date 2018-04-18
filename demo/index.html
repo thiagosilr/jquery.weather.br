@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>jQuery Weather BR - Demo</title>
+
+        <!-- Icons Weather -->
+        <link href="../node_modules/weather-icons/css/weather-icons.min.css" media="all" rel="stylesheet" />
+        <!-- jQuery Weather CSS -->
+        <link href="../dist/jquery.weather.br.min.css" media="all" rel="stylesheet" />
+        
+        <style type="text/css">
+            #weather {
+                margin: auto;
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Element to be applied jquery.weather -->
+        <div id="weather"></div>
+        
+        <!-- jQuery -->            
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <!-- jQuery Weather --> 
+        <script src="../dist/jquery.weather.br.js"></script>
+
+        <!-- Start jQuery Weather -->
+        <script>
+            $(function() {
+                $('#weather').weather({
+                    locationLat: -19.9267427,
+                    locationLon: -43.9601151
+                });
+            });
+        </script>
+    </body>
+</html>
