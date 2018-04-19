@@ -1,7 +1,7 @@
 {
   "name": "jquery.weather.br",
   "version": "1.0.1",
-  "description": "Plugin jQuery do clima brasileiro.",
+  "description": "Plugin jQuery que exibe a previsão do tempo para as cidades brasileiras.",
   "homepage": "http://lab.thiagosr.com.br/jquery.weather.br",
   "keywords": [
     "jquery-plugin",
