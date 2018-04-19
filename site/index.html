@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>jQuery Weather BR</title>
+
+        <!-- Favicon -->
+        <link rel="icon" href="img/favicon.ico">
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/clean-blog.min.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only" data-i18n="menu">Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">jQuery Weather BR</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#section-getting-started" data-i18n="getting-started">Primeiros passos</a>
+                        </li>
+                        <li>
+                            <a href="#section-example" data-i18n="example">Exemplo</a>
+                        </li>
+                        <li>
+                            <a href="#section-config" data-i18n="configuration">Configuração</a>
+                        </li>
+                        <li>
+                            <a href="?setLng=es" class="flag flag-es" data-i18n="setIdioma.es">Alterar para o idioma Espanhol</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="flag flag-br" data-i18n="setIdioma.pt">Alterar para o idioma Português</a>
+                        </li>
+                        <li>
+                            <a href="?setLng=en" class="flag flag-us" data-i18n="setIdioma.en">Alterar para o idioma Inglês</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('img/bg1.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="page-heading"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <!-- Getting started -->
+                        <h2 id="section-getting-started" class="section-heading" data-i18n="getting-started">Primeiros passos</h2>
+                        <p data-i18n="plugin.description">Plugin jQuery que exibe a previsão do tempo para as cidades brasileiras.</p>
+                        <p>
+                            1. <a href="https://github.com/thiagosilr/jquery.weather.br/archive/master.zip" data-i18n="plugin.link-download">Download da última versão</a>
+                            <span data-i18n="plugin.or">ou</span> <code>npm install jquery.weather.br --save</code>
+                        </p>
+                        <p>
+                            2. <span data-i18n="plugin.add-css-1">Agora iremos incluir os arquivos CSS e Javascript. Você pode pegar os arquivos na pasta</span> <code>/dist</code> <span data-i18n="plugin.add-css-2">do arquivo que você baixou manualmente ou atráves do gerenciador de pacotes.</span>
+
+                            <ul>
+                                <li>
+                                    <span data-i18n="plugin.add-css-3">Inclua o CSS no topo da sua página na tag</span> <code>&lt;head&gt;</code>:<br>
+                                    <code>&lt;link href="diretorio-aplicacao/jquery.weather.br.min.css" rel="stylesheet"&gt;</code>
+                                </li>
+                                <li>
+                                    <span data-i18n="plugin.add-css-4">Inclua o Javascript na parte inferior da sua página antes do fechamento da tag</span> <code>&lt;/body&gt;</code>:<br>
+                                    <code>&lt;script src="diretorio-aplicacao/jquery.weather.br.min.js"&gt;</script></code>
+                                </li>
+                            </ul>
+                        </p>
+                        <p>
+                            3. <span data-i18n="plugin.add-css-5">Certifique-se de que o jQuery que é exigido pelo plugin, também seja carregado.</span>
+                            <ul>
+                                <li>
+                                    <span data-i18n="plugin.add-css-6">Se você já usa o jQuery em sua página, verifique se ele está carregado antes de</span> jquery.weather.br.min.js.
+                                </li>
+                                <li>
+                                    jQuery 1.5.1 <span data-i18n="plugin.add-css-7">ou superior é necessário.</span>
+                                </li>
+                                <li>
+                                    jQuery Slim <span data-i18n="plugin.add-css-8">não é compatível com o plugin.</span>
+                                </li>
+                            </ul>
+                        </p>
+                        <p>
+                            4. <span data-i18n="plugin.add-css-9">Executando o plugin. Basta escolher o elemento onde o mesmo irá inserir o conteúdo.</span>
+                            <script src="https://gist.github.com/thiagosilr/1c728b83096c8317a3e2cf685bae3726.js"></script>
+                        </p>
+
+
+                        <!-- Example -->
+                        <h2 id="section-example" class="section-heading" data-i18n="example">Exemplo</h2>
+                        
+                        <ul id="example-tabs" class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#example-html" id="exemple-html-tab" role="tab" data-toggle="tab" aria-controls="example html" aria-expanded="true">
+                                    HTML
+                                </a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="#example-result" role="tab" id="example-result-tab" data-toggle="tab" aria-controls="example result" aria-expanded="false" data-i18n="result">
+                                    Resultado
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div id="example-tabs-content" class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade active in" id="example-html" aria-labelledby="example-html-tab">
+                                <script src="https://gist.github.com/thiagosilr/f504924601c1acaf5785.js"></script>
+                            </div> 
+
+                            <div role="tabpanel" class="tab-pane fade" id="example-result" aria-labelledby="example-result-tab">
+                                <iframe class="section-example-result" src="demo"></iframe>
+                            </div>
+                        </div>
+
+
+                        <!-- Configuration --> 
+                        <h2 id="section-config" class="section-heading" data-i18n="configuration">Configuração</h2>
+                        <script src="https://gist.github.com/thiagosilr/91f82a530eb0cc4259e6.js"></script>
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="name">Nome</th>
+                                    <th data-i18n="required">Obrigatório</th>
+                                    <th data-i18n="type">Tipo</th>
+                                    <th data-i18n="default">Valor padrão</th>
+                                    <th data-i18n="description">Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>geoLocation</td>
+                                    <td><span class="label label-success" data-i18n="no">Não</span></td>
+                                    <td>Boolean</td>
+                                    <td>true</td>
+                                    <td>
+                                        <p>
+                                            <code>true</code> <span data-i18n="geolocation.true">O plugin irá tentar obter a localização atual do usuário utilizando geolocation. Caso não sejá possível o mesmo irá utilizar as coordenadas fornecidas nos parâmetros locationLat e locationLon.</span>
+                                        </p>
+                                        <p>
+                                            <code>false</code> <span data-i18n="geolocation.false">O plugin irá utilizar apenas as coordenadas fornecidas nos parâmetros locationLat e locationLon.</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>locationLat</td>
+                                    <td><span class="label label-danger" data-i18n="yes">Sim</span></td>
+                                    <td>Decimal</td>
+                                    <td></td>
+                                    <td>
+                                        <p data-i18n="locationLat">Forneça a latitude do local a qual deseja obter o clima.</p>
+                                        <p><a href="#obter-lat-lon" data-i18n="locationLatLonLink">Como obter latitude e longitude de um local</a></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>locationLon</td>
+                                    <td><span class="label label-danger" data-i18n="yes">Sim</span></td>
+                                    <td>Decimal</td>
+                                    <td></td>
+                                    <td>
+                                        <p data-i18n="locationLon">Forneça a longitude do local a qual deseja obter o clima.</p>
+                                        <p><a href="#obter-lat-lon" data-i18n="locationLatLonLink">Como obter latitude e longitude de um local</a></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>lang</td>
+                                    <td><span class="label label-success" data-i18n="no">Não</span></td>
+                                    <td>String</td>
+                                    <td>en</td>
+                                    <td>
+                                        <span data-i18n="language">Idioma</span>
+                                        <p>
+                                            <code>en</code> <span data-i18n="en">Inglês</span>
+                                        </p>
+                                        <p>
+                                            <code>es</code> <span data-i18n="es">Espanhol</span>
+                                        </p>
+                                        <p>
+                                            <code>pt</code> <span data-i18n="pt">Português</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>unit</td>
+                                    <td><span class="label label-success" data-i18n="no">Não</span></td>
+                                    <td>String</td>
+                                    <td>f</td>
+                                    <td>
+                                        <p>
+                                            <code>f</code> Fahrenheit
+                                        </p>
+                                        <p>
+                                            <code>c</code> Celsius
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>format</td>
+                                    <td><span class="label label-success" data-i18n="no">Não</span></td>
+                                    <td>String</td>
+                                    <td>week</td>
+                                    <td>
+                                        <p>
+                                            <code>week</code> <span data-i18n="week">Semana</span>
+                                        </p>
+                                        <p>
+                                            <code>today</code> <span data-i18n="today">Hoje</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>pathFolderLocales</td>
+                                    <td><span class="label label-success" data-i18n="no">Não</span></td>
+                                    <td>String</td>
+                                    <td data-i18n="pathFolderLocales.default">O plugin irá procurar pela pasta locales no mesmo diretório onde o plugin foi instalado.</td>
+                                    <td>
+                                        <p data-i18n="pathFolderLocales.description">
+                                            Caso coloque as traduções em outro diretório forneça o mesmo.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="obter-lat-lon" data-i18n="getLatLon">Obter latitude e longitude</h3>
+                        <p>
+                            <span data-i18n="linkGetLatLon">Acesse o seguinte site para pesquisar a localidade desejada e obter a latitude e longitude</span> 
+                            <a href="http://www.latlong.net" target="_blank">http://www.latlong.net</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <ul class="list-inline text-center">
+                            <li>
+                                <a href="https://github.com/thiagosilr/jquery.weather.br" target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="copyright text-muted">Copyright &copy; lab.thiagosr.com.br/jquery.weather.br 2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="js/clean-blog.js"></script>
+
+        <!-- i18next Translation -->
+        <script src="js/i18next-1.8.0.min.js"></script>
+
+        <script type="text/javascript">
+            function obterUrlParametro(parametro) {
+                parametro = parametro.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + parametro + "=([^&#]*)"),
+                    resultado = regex.exec(location.search);
+
+                return resultado == null ? "" : decodeURIComponent(resultado[1].replace(/\+/g, " "));
+            }
+
+            var lang = obterUrlParametro('setLng');
+                lang = lang == '' ? 'pt' : lang;
+                
+            i18n.init(
+                {
+                    lng: lang,
+                    resGetPath: 'locales/__lng__.json',
+                },
+                function(translation) {
+                    $('body').i18n();
+                }
+            );
+        </script>
+
+        <script>
+            // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            // ga('create', 'UA-18463116-3', 'auto');
+            // ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>

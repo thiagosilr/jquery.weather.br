@@ -1,0 +1,11 @@
+{
+    "Sun": "Dom",
+    "Mon": "Seg",
+    "Tue": "Ter",
+    "Wed": "Quar",
+    "Thu": "Quin",
+    "Fri": "Sex",
+    "Sat": "Sáb",
+    "ServiceError": "Serviço temporariamente indisponível.",
+    "Load": "Carregando..."
+}

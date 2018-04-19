@@ -1,0 +1,52 @@
+{
+    "menu": "Menu",
+    "getting-started": "Primeros pasos",
+    "example": "Ejemplo",
+    "configuration": "Configuracíon",
+    "setIdioma": {
+    	"es": "Cambiar para idioma Español",
+    	"pt": "Cambiar para idioma Portugués",
+    	"en": "Cambiar para idioma Inglés"
+	},
+    "result": "Resultado",
+    "name": "Nombre",
+    "required": "Obligatorio",
+    "type": "Tipo",
+    "default": "Estándar",
+    "description": "Descripción",
+    "no": "No",
+    "yes": "Sí",
+    "geolocation": {
+    	"true": "El plug-in tratará de obtener la ubicación actual del usuario utilizando la geolocalización. Si no es posible que va a utilizar las coordenadas que figuran en los parámetros locationLat y locationLon.",
+    	"false": "El plug-in sólo utilizará las coordenadas que figuran en los parámetros locationLat y locationLon."
+    },
+    "locationLat": "Proporcionar la latitud de ubicación, para obtener el tiempo.",
+    "locationLatLonLink": "Cómo obtener latitud y longitud de un lugar",
+    "locationLon": "Proporcionar la longitud de ubicación, para obtener el tiempo.",
+    "language": "Idioma",
+    "en": "Inglés",
+    "es": "Español",
+    "pt": "Portugués",
+    "week": "Semana",
+    "today": "Hoy",
+    "getLatLon": "Obtener latitud y longitud",
+    "linkGetLatLon": "Visite el siguiente sitio web para encontrar la ubicación deseada y obtener la latitud y longitud:",
+    "plugin": {
+        "description": "Plugin jQuery que muestra la previsión del tiempo para las ciudades brasileñas.",
+        "link-download": "Descargar la última versión",
+        "or": "o",
+        "add-css-1": "Ahora vamos a incluir los archivos CSS y Javascript. Usted puede tomar los archivos en la carpeta",
+        "add-css-2": "del archivo que descargó manualmente o a través del gestor de paquetes.",
+        "add-css-3": "Incluir el CSS en la parte superior de su página en la etiqueta",
+        "add-css-4": "Incluya el Javascript en la parte inferior de su página antes del cierre de la etiqueta",
+        "add-css-5": "Asegúrese de que el jQuery que es necesario por el plugin, también se carga.",
+        "add-css-6": "Si ya utiliza jQuery en su página, asegúrese de que está cargado antes de",
+        "add-css-7": "o superior es necesario.",
+        "add-css-8": "no es compatible con el plugin.",
+        "add-css-9": "Ejecutando el plugin. Sólo tienes que elegir el elemento donde insertar el contenido."
+    },
+    "pathFolderLocales": {
+        "default": "El plugin buscará la carpeta local en el mismo directorio donde se instaló el plugin.",
+        "description": "Si coloca las traducciones en otro directorio, proporcione el mismo."
+    }
+}

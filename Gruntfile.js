@@ -17,6 +17,15 @@ module.exports = function( grunt ) {
 				" */\n"
 		},
 
+		copy: {
+			main: {
+				expand: true,
+				cwd: 'src',
+			    src: 'font/*',
+			    dest: 'dist'
+			}
+		},
+
 		// Concat definitions
 		concat: {
 			options: {
@@ -27,7 +36,7 @@ module.exports = function( grunt ) {
 				dest: "dist/jquery.weather.br.js"
 			},
 			css: {
-				src: [ "src/jquery.weather.br.css" ],
+				src: [ "src/jquery.weather.br.css", "src/jquery.weather.br.icons.css" ],
 				dest: "dist/jquery.weather.br.css"
 			},
 			locales: {
@@ -67,8 +76,8 @@ module.exports = function( grunt ) {
 		  target: {
 		    files: [{
 		      expand: true,
-		      cwd: 'src',
-		      src: ['*.css'],
+		      cwd: 'dist',
+		      src: ['jquery.weather.br.css'],
 		      dest: 'dist',
 		      ext: '.weather.br.min.css'
 		    }]
@@ -79,9 +88,10 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( "grunt-contrib-concat" );
 	grunt.loadNpmTasks( "grunt-contrib-jshint" );
 	grunt.loadNpmTasks( "grunt-contrib-uglify" );
-	grunt.loadNpmTasks("grunt-contrib-cssmin");
+	grunt.loadNpmTasks( "grunt-contrib-cssmin" );
+	grunt.loadNpmTasks( "grunt-contrib-copy" );
 
 	grunt.registerTask( "lint", [ "jshint" ] );
 	grunt.registerTask( "build", [ "concat", "uglify", "cssmin" ] );
-	grunt.registerTask( "default", [ "lint", "build" ] );
+	grunt.registerTask( "default", [ "copy", "lint", "build" ] );
 };
